@@ -27,7 +27,7 @@ jobs:
         run: bandit -r app/ -ll -ii
         
       - name: Dependency Vulnerability Scan with Safety
-        run: safety check -r requirements.txt --full-report
+        run: safety scan -r requirements.txt
 
   unit-tests:
     runs-on: ubuntu-latest
